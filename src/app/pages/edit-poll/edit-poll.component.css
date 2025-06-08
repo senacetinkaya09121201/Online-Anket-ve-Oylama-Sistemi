@@ -102,3 +102,19 @@
   font-size: 16px;
   color: #555;
 }
+.remove-option-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-left: 10px;
+}
+
+.remove-option-button:hover {
+  background-color: #c82333;
+}

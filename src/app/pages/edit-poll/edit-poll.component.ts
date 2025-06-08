@@ -18,6 +18,19 @@ export class EditPollComponent implements OnInit {
     private router: Router
   ) {}
 
+  removeLastOption() {
+  // En az 2 geçerli seçenek varsa silmeye izin ver
+  const filledOptions = this.poll.options.filter(opt => opt.trim() !== '');
+  if (filledOptions.length > 2) {
+    this.poll.options.pop();
+    this.poll.votes.pop();
+  } else {
+    alert("En az 2 geçerli seçenek olmalıdır.");
+  }
+}
+
+
+
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
