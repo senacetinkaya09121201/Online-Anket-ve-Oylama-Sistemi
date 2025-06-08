@@ -1,0 +1,56 @@
+<h2 class="create-title">Anketler</h2>
+
+<button routerLink="/create" class="create-button">
+  ➕ Yeni Anket Oluştur
+</button>
+
+<!-- 🔁 Anket Listesi -->
+<div *ngFor="let poll of polls" class="poll-row">
+  <div class="poll-card">
+    <h3>{{ poll.question }}</h3>
+
+    <div class="options">
+      <div
+        *ngFor="let option of poll.options; let i = index"
+        class="option-row"
+      >
+        <button (click)="vote(poll, i)">
+          {{ option }} - ({{ poll.votes[i] }} oy)
+        </button>
+      </div>
+    </div>
+
+    <div class="actions" *ngIf="poll.creatorId === currentUserId">
+      <button class="delete-button" (click)="deletePoll(poll.id!)">
+        🗑 Sil
+      </button>
+      <button class="edit-button" (click)="navigateToEdit(poll.id!)">
+        ✏️ Düzenle
+      </button>
+    </div>
+  </div>
+
+  <div class="poll-charts">
+    <div class="chart-group">
+      <div class="chart-container">
+        <app-poll-chart
+          [question]="poll.question"
+          [options]="poll.options"
+          [votes]="poll.votes"
+        ></app-poll-chart>
+      </div>
+      <div class="chart-container">
+        <app-chart
+          [question]="poll.question"
+          [options]="poll.options"
+          [votes]="poll.votes"
+        ></app-chart>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Bu artık sadece bir tane ve sayfanın altında -->
+<div class="logout-container">
+  <button class="logout-button" (click)="logout()">Çıkış Yap</button>
+</div>

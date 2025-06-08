@@ -1,0 +1,19 @@
+<h2 class="create-title">Anket Oluştur</h2>
+
+
+<div class="form-container">
+  <label>Soru:</label>
+  <input [(ngModel)]="question" name="question" type="text" />
+
+  <label>Seçenekler:</label>
+  <div *ngFor="let option of options; let i = index; trackBy: trackByIndex">
+    <input
+      [(ngModel)]="options[i]"
+      [name]="'option' + i"
+      placeholder="Seçenek {{ i + 1 }}"
+    />
+  </div>
+
+  <button (click)="addOption()" class="add-option-btn">+ Seçenek Ekle</button>
+  <button (click)="createPoll()" class="submit-btn">Anket Oluştur</button>
+</div>

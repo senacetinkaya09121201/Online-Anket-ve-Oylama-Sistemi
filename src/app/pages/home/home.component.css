@@ -1,0 +1,181 @@
+.create-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.create-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 8px auto 0;
+  border-radius: 4px;
+}
+
+.chart-group {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  flex-wrap: wrap; /* Ekran daralınca alta geçmesi için */
+}
+
+.chart-container {
+  width: 400px;
+  max-width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.create-button {
+  background: linear-gradient(to bottom, #ff4d4d, #b30000);
+  border: 2px solid #aaa;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  padding: 12px 28px;
+  font-size: 16px;
+  box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.create-button:hover {
+  background: linear-gradient(to bottom, #ff1a1a, #800000);
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.4),
+    0 6px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.poll-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.poll-card {
+  width: 400px; /* chart-container ile aynı */
+  max-width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #f9f9f9; /* chart-container ile aynı renk */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* chart-container ile aynı gölge */
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+}
+
+.poll-title {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.options button {
+  background-color: #e7e7e7;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.options button:hover {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.actions {
+  display: flex;
+  justify-content: center; /* Ortala */
+  gap: 12px; /* Aralık */
+  margin-top: 16px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Ortak stil */
+.actions button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 🗑 Sil */
+.delete-button {
+  background: linear-gradient(to right, #dc3545, #a71d2a);
+  color: white;
+}
+.delete-button:hover {
+  background: linear-gradient(to right, #c82333, #721c24);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ✏️ Düzenle */
+.edit-button {
+  background: linear-gradient(to right, #28a745, #1e7e34);
+  color: white;
+}
+.edit-button:hover {
+  background: linear-gradient(to right, #218838, #155724);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logout-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.logout-button {
+  background: linear-gradient(to right, #dc3545, #c82333);
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button:hover {
+  background: linear-gradient(to right, #bd2130, #a71d2a);
+  transform: scale(1.05);
+}

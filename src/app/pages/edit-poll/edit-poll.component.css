@@ -1,0 +1,104 @@
+.edit-form {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.edit-title {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.edit-title::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 4px;
+}
+
+.edit-form label {
+  font-weight: 600;
+  margin-top: 10px;
+  color: #444;
+}
+
+.edit-form input {
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.2s;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.edit-form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
+}
+
+/* ✅ Butonları yan yana hizalayan satır */
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* Ortak stil */
+.add-option-button,
+.update-button {
+  flex: 1;
+  max-width: 180px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* 🟦 Seçenek Ekle */
+.add-option-button {
+  background: linear-gradient(to right, #17a2b8, #138496);
+  color: white;
+}
+
+.add-option-button:hover {
+  background: linear-gradient(to right, #0f6674, #117a8b);
+  transform: scale(1.03);
+}
+
+/* 🟩 Güncelle */
+.update-button {
+  background: linear-gradient(to right, #28a745, #218838);
+  color: white;
+}
+
+.update-button:hover {
+  background: linear-gradient(to right, #1e7e34, #1c7430);
+  transform: scale(1.03);
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}

@@ -1,0 +1,25 @@
+<h2 class="edit-title">Anketi Düzenle</h2>
+
+<div class="edit-form">
+  <div *ngIf="!loading">
+    <label for="question">Soru:</label>
+    <input
+      id="question"
+      [(ngModel)]="poll.question"
+      placeholder="Soru yaz..."
+    />
+
+    <div *ngFor="let option of poll.options; let i = index">
+      <input [(ngModel)]="poll.options[i]" />
+    </div>
+
+    <div class="button-row">
+      <button class="add-option-button" (click)="addOption()">
+        + Seçenek Ekle
+      </button>
+      <button class="update-button" (click)="updatePoll()">✅ Güncelle</button>
+    </div>
+
+    <div *ngIf="loading" class="loading-text">Yükleniyor...</div>
+  </div>
+</div>
